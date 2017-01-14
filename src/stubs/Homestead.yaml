@@ -4,18 +4,19 @@ memory: 2048
 cpus: 1
 provider: virtualbox
 
-authorize: ~/.ssh/id_rsa.pub
+authorize: Users/meredithalcorn/.ssh/id_rsa.pub
 
 keys:
-    - ~/.ssh/id_rsa
+    - /Users/meredithalcorn/.ssh/id_rsa
 
 folders:
-    - map: ~/Code
-      to: /home/vagrant/Code
+    # The map may be different from what it is right now - not sure
+    - map: /Users/meredithalcorn/.homestead/Homestead/Projects/laravel-dev
+      to: /home/vagrant/Projects
 
 sites:
-    - map: homestead.app
-      to: /home/vagrant/Code/Laravel/public
+    - map: laravel-dev
+      to: /home/vagrant/Projects/public
 
 databases:
     - homestead
